@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.2.7">
+<!ENTITY version     "1.2.9">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "6846c5e223fe1fbc5ab2f516e4d4bd25">
+<!ENTITY md5         "c0d95ebfd3214553936e0354617395de">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,7 +18,7 @@
 >
 
 <CHANGES>
-###2016-01-04 - v1.2.7
+###2016-01-04 - v1.2.9
 - Converted to a plugin. The docker version is no longer maintained.
 - Notification system based on unRAID
 - Improved Settings page
