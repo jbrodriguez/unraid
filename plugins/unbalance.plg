@@ -94,6 +94,9 @@ The 'remove' script.
 -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
+# Let's kill the unbalance process, if it's running
+killall unbalance
+
 # Remove all plugin files.
 rm -rf /usr/local/emhttp/plugins/&name;
 rm -rf /boot/config/plugins/&name;
