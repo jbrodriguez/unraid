@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.2.12">
+<!ENTITY version     "1.2.14">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "681dffb75b2eb2a3ffe03e952b300a29">
+<!ENTITY md5         "5ae0f788e20a19d73d426f51b765724d">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,6 +18,10 @@
 >
 
 <CHANGES>
+###2016-01-09 - v1.2.14
+- Fixed plugin startup issues
+- Update instructions on how to run the app
+
 ###2016-01-09 - v1.2.12
 - New settings page (unRAID interface)
 
@@ -73,6 +77,17 @@ Get the unBALANCE bundle.
 <MD5>&md5;</MD5>
 </FILE>
 
+<!-- Install default plugin cfg  -->
+<FILE Name="/boot/config/plugins/unbalance/unbalance.cfg">
+<INLINE>
+<![CDATA[
+SERVICE="enable"
+PORT="6237"
+RUNAS="nobody"
+]]>
+</INLINE>
+</FILE>
+
 <!--
 Prepare for installation.
 -->
@@ -89,6 +104,14 @@ rm -f $(ls /boot/config/plugins/&name;/&name;*.tgz 2>/dev/null | grep -v '&versi
 
 # Install the 'bundle'.
 tar -xf /boot/config/plugins/&name;/&bundle; -C /usr/local/emhttp/plugins
+
+echo ""
+echo "-----------------------------------------------------------"
+echo " unBALANCE has been installed."
+echo " Copyright (c) &author;"
+echo " Version: &version;"
+echo "-----------------------------------------------------------"
+echo ""
 </INLINE>
 </FILE>
 
@@ -101,6 +124,14 @@ The 'remove' script.
 # Remove all plugin files.
 rm -rf /usr/local/emhttp/plugins/&name;
 rm -rf /boot/config/plugins/&name;
+
+echo ""
+echo "-----------------------------------------------------------"
+echo " unBALANCE has been removed."
+echo " Copyright (c) &author;"
+echo " Version: &version;"
+echo "-----------------------------------------------------------"
+echo ""
 </INLINE>
 </FILE>
 
