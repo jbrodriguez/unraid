@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.2.11">
+<!ENTITY version     "1.2.12">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "40b641e90dbb65caf3197d97e1e6ae41">
+<!ENTITY md5         "681dffb75b2eb2a3ffe03e952b300a29">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,6 +18,9 @@
 >
 
 <CHANGES>
+###2016-01-09 - v1.2.12
+- New settings page (unRAID interface)
+
 ###2016-01-08 - v1.2.11
 - Converted to a plugin. The docker version is no longer maintained.
 - Notification system based on unRAID
@@ -75,8 +78,8 @@ Prepare for installation.
 -->
 <FILE Run="/bin/bash">
 <INLINE>
-# Let's kill the unbalance process, if it's running
-killall unbalance
+# Let's stop the unbalance process, if it's running
+/usr/local/emhttp/plugins/&name;/scripts/stop
 
 # Remove emhttp files so we can re-install.
 rm -rf /usr/local/emhttp/plugins/&name;/* 2>/dev/null
@@ -94,12 +97,24 @@ The 'remove' script.
 -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
-# Let's kill the unbalance process, if it's running
-killall unbalance
-
+/usr/local/emhttp/plugins/&name;/scripts/stop
 # Remove all plugin files.
 rm -rf /usr/local/emhttp/plugins/&name;
 rm -rf /boot/config/plugins/&name;
+</INLINE>
+</FILE>
+
+<FILE Name="/tmp/unbalance-chkconf" Run="/bin/bash">
+<INLINE>
+<![CDATA[
+#!/bin/sh
+# This will check each entry in the config so nothing is missing, and if missing, sets to default
+CFGFILE=/boot/config/plugins/unbalance/unbalance.cfg
+[ ! `cat "$CFGFILE" | grep SERVICE` ] && echo "SERVICE=\"enable\"" >> "$CFGFILE"
+[ ! `cat "$CFGFILE" | grep ^PORT` ] && echo "PORT=\"6237\"" >> "$CFGFILE"
+[ ! `cat "$CFGFILE" | grep RUNAS` ] && echo "RUNAS=\"nobody\"" >> "$CFGFILE"
+rm /tmp/unbalance-chkconf
+]]>
 </INLINE>
 </FILE>
 
