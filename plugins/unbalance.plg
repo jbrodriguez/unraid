@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.3.2">
+<!ENTITY version     "1.3.3">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "c5fc150bad1ab5cc3613e9a04ce38bb0">
+<!ENTITY md5         "2ea3750dafabac67aae688497f57c126">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,6 +18,9 @@
 >
 
 <CHANGES>
+###2016-02-18 - v1.3.3
+- Fix check for console lines (1000 lines limit)
+
 ###2016-02-18 - v1.3.2
 - Fix bug where progress messages were not showing
 - Add additional progress notification when calculating
