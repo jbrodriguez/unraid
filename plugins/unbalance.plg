@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.3.3">
+<!ENTITY version     "1.3.4">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "2ea3750dafabac67aae688497f57c126">
+<!ENTITY md5         "048417b0d43c178ce71829537841ba72">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,6 +18,9 @@
 >
 
 <CHANGES>
+###2016-02-18 - v1.3.4
+- Add progress stats when moving folders (percentage of completion, estimated time left and approximate MB/s)
+
 ###2016-02-18 - v1.3.3
 - Fix check for console lines (1000 lines limit)
 
