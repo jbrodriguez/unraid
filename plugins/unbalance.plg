@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.5.2">
+<!ENTITY version     "1.5.3">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "be492b5540463ff50bcdb8a8d3f6b8e7">
+<!ENTITY md5         "4939c7ce7d197e16a8e35648202f5db2">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,6 +18,9 @@
 >
 
 <CHANGES>
+###2016-06-08 - v1.5.3
+- Fix incorrect param when requesting unRAID disks filesystem data
+
 ###2016-06-08 - v1.5.2
 - Update rsync default flags
 
