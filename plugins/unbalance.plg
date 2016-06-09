@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.6.0">
+<!ENTITY version     "1.7.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "59b53ee6012fdefbf783de889f50e961">
+<!ENTITY md5         "3ada5e597b65460c444ae305116e4560">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,6 +18,10 @@
 >
 
 <CHANGES>
+###2016-06-09 - v1.7.0
+- Update README.md to reflect latest changes
+- Keep full CHANGELOG in Github
+
 ###2016-06-09 - v1.6.0
 - Update default rsync flags if needed
 - Fix leading slash in relative path
