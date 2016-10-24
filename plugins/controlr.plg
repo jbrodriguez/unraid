@@ -7,7 +7,7 @@
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "96b028eeb3151a484beeaebd72049e58">
+<!ENTITY md5         "63d48b8f38858bbf659f7a4e181e4ede">
 ]>
 
 <PLUGIN  name="&name;"
