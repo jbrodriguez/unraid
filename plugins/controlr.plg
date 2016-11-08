@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.0.6">
+<!ENTITY version     "1.1.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "2703d22107e388e55944ab14192a27a8">
+<!ENTITY md5         "cb758b7f93c1391b475114ff662f51a0">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,8 +18,8 @@
 >
 
 <CHANGES>
-2016-10-31 - 1.0.6
-- Add index to support files
+2016-11-08 - 1.1.0
+- Create api endpoint to support ControlR app
 </CHANGES>
 
 <!--
