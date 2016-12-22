@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.8.7">
+<!ENTITY version     "1.8.9">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "4fd2c1733fd76fc4f4e10f4388979a9e">
+<!ENTITY md5         "445005475a6097d06a549fb52b69efdd">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,8 +18,8 @@
 >
 
 <CHANGES>
-2016-12-11 - 1.8.7
-- Fix empty plg file
+2016-12-22 - 1.8.9
+- Fix a crash due to filesystem errors
 </CHANGES>
 
 <!--
