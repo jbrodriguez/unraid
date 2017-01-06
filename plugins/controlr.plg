@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "1.1.1">
+<!ENTITY version     "1.1.4">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "387de3becbb00bd26773791d686de096">
+<!ENTITY md5         "341872f1f89350edb3878665ff701261">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,9 +18,9 @@
 >
 
 <CHANGES>
-2016-11-10 - 1.1.1
-- Check for log presence before accessing it
-- Replace Gitlab CI with cix
+2017-01-06 - 1.1.4
+- Add debug endpoint
+- Remove support script
 </CHANGES>
 
 <!--
