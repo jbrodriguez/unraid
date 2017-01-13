@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "2.0.0">
+<!ENTITY version     "2.0.1">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "076b38126b6b7a6290dbac703afe83ed">
+<!ENTITY md5         "064fe026c8d9383922ac4b333e97fd99">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,13 +18,9 @@
 >
 
 <CHANGES>
-2017-01-13 - 2.0.0
-unBALANCE 2 now displays a disk explorer in its main interface,
-in order to improve the experience of choosing which files/folders
-need to be moved off of a disk.
+2017-01-13 - 2.0.1
 
-Also in this release:
-- General improvements and bug fixes
+The README is now updated to reflect the new features
 </CHANGES>
 
 <!--
