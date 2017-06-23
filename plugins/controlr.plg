@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "2.0.4">
+<!ENTITY version     "2.0.5">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "6b3567fe4c124905477759fd753aeb32">
+<!ENTITY md5         "05aeb15547549016839f4ff5f125301f">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,10 +18,12 @@
 >
 
 <CHANGES>
-2017-06-23 - 2.0.4
+2017-06-23 - 2.0.5
 
 This should fix the issue with the UI link in the Settings page
 of unRAID&#39;s webGui.
+
+Additionally, a minor fix for the mixed content bug was added.
 </CHANGES>
 
 <!--
