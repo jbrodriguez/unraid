@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "3.1.0">
+<!ENTITY version     "3.1.1">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "4f69299f79d700814f9c27eb304a317e">
+<!ENTITY md5         "f28ca4f8451f9e714a3da40ddbe4e614">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,23 +18,9 @@
 >
 
 <CHANGES>
-2017-06-30 - 3.1.0
+2017-07-01 - 3.1.1
 
-Log verbosity can now be modified through a setting:
-
-- Normal
-Don&#39;t print rsync output
-
-- Full
-Print full rsync output
-
-When a transfer has finished, it will now log how much data was
-transferred and the approximate speed (in MB/s).
-
-Additionally, the following changes were made:
-- Fix an issue when refreshing the UI with notifications enabled
-- Improve handling of config file (when not present)
-- Other bug fixes and improvements
+Make the transfer operation use the latest dry-run setting
 </CHANGES>
 
 <!--
