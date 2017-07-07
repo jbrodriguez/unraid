@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "3.1.2">
+<!ENTITY version     "3.2.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "39df4852514e6cf2af7109dff2961ec0">
+<!ENTITY md5         "8e1c3983d754c26eea78b2d0c15e4710">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,9 +18,24 @@
 >
 
 <CHANGES>
-2017-07-06 - 3.1.2
+2017-07-07 - 3.2.0
 
-Before removing a file/folder on the source disk, make sure it exists on the destination disk.
+VALIDATE operation is now implemented !!
+
+Available after a COPY operation, it performs a checksum copy, thus validating the integrity
+of the data.
+
+It works by replacing the rsync flags from
+
+-avPRX (default flags)
+
+to
+
+-rcPRX
+
+If you set custom rsync flags, &quot;-a&quot; MUST still be the first one.
+
+Also note that this operation takes a long time to complete.
 </CHANGES>
 
 <!--
