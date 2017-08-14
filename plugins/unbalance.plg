@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "3.2.0">
+<!ENTITY version     "3.3.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "8e1c3983d754c26eea78b2d0c15e4710">
+<!ENTITY md5         "91ebf64ac53de793863e2a167e296160">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,24 +18,21 @@
 >
 
 <CHANGES>
-2017-07-07 - 3.2.0
+2017-08-14 - 3.3.0
 
-VALIDATE operation is now implemented !!
+GATHER operation is now implemented !!
 
-Available after a COPY operation, it performs a checksum copy, thus validating the integrity
-of the data.
+Consolidate folders from your user shares into a single drive, always checking that enough
+space is available for the operation.
 
-It works by replacing the rsync flags from
+Also, as soon as any transfer operation gets underway, a notification is sent showing which
+rsync commands will be executed (this happens after you click Move, Copy or Proceed).
 
--avPRX (default flags)
-
-to
-
--rcPRX
-
-If you set custom rsync flags, &quot;-a&quot; MUST still be the first one.
-
-Also note that this operation takes a long time to complete.
+Additionally, the following changes were made:
+- Verbosity setting controls permission issue logging
+- Fix issue with console panel not allowing mouse scroll
+- Drive sizes in logs are shown in &#39;base 1000&#39;
+- Update internal components
 </CHANGES>
 
 <!--
