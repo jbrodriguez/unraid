@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "3.3.0">
+<!ENTITY version     "3.3.1">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "91ebf64ac53de793863e2a167e296160">
+<!ENTITY md5         "9fd54a003a2272e4caded8937cd3c853">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,21 +18,10 @@
 >
 
 <CHANGES>
-2017-08-14 - 3.3.0
+2017-08-18 - 3.3.1
 
-GATHER operation is now implemented !!
-
-Consolidate folders from your user shares into a single drive, always checking that enough
-space is available for the operation.
-
-Also, as soon as any transfer operation gets underway, a notification is sent showing which
-rsync commands will be executed (this happens after you click Move, Copy or Proceed).
-
-Additionally, the following changes were made:
-- Verbosity setting controls permission issue logging
-- Fix issue with console panel not allowing mouse scroll
-- Drive sizes in logs are shown in &#39;base 1000&#39;
-- Update internal components
+- Add dry-run logging
+- Add bitcoin address to the support fund
 </CHANGES>
 
 <!--
