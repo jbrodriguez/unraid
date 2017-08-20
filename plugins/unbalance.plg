@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "3.3.1">
+<!ENTITY version     "3.3.2">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "9fd54a003a2272e4caded8937cd3c853">
+<!ENTITY md5         "fac1d10503fde5278974a572bbd3ef4c">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,10 +18,14 @@
 >
 
 <CHANGES>
-2017-08-18 - 3.3.1
+2017-08-20 - 3.3.2
 
-- Add dry-run logging
-- Add bitcoin address to the support fund
+This release fixes the issue with the wrong progress percentages.
+
+Also fixes the issue with the source folder not being removed.
+
+Finally, the plugin now checks for an update when starting.
+This is enabled by default, but can be turned off in the settings.
 </CHANGES>
 
 <!--
