@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "2.5.0">
+<!ENTITY version     "2.5.1">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "ed017e8a86412e222489829c9e519f33">
+<!ENTITY md5         "8f8856b0208de532e451838f47b584ea">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,9 +18,9 @@
 >
 
 <CHANGES>
-2017-10-25 - 2.5.0
+2017-10-27 - 2.5.1
 
-- Implement UPS status support
+- Fix issue with nut config file that caused a crash
 </CHANGES>
 
 <!--
