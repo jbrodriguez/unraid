@@ -3,11 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "3.3.3">
+<!ENTITY version     "4.0.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "3cb8fd1510bee435385e2015abc8b4e8">
+<!ENTITY md5         "23749335f5600f4bfa079b01788048d9">
 ]>
 
 <PLUGIN  name="&name;"
@@ -18,17 +18,39 @@
 >
 
 <CHANGES>
-2017-09-12 - 3.3.3
+2017-12-05 - 4.0.0
 
-It now removes the source parent folder if it&#39;s empty after all the transfers take place.
+This is major release bringing in new features to improve the end user experience !
 
-Run a dry-run first to show the command it will attempt after each transfer has finished.
+### Transfer page
+Here you can monitor the progress of a transfer operation (move/copy), broken down by each rsync command that are
+taking place
 
-The command line to delete the parent folder is
+### History page
+This is a list of all the operations that have been executed. This allows you to
 
-```
-find &lt;parent folder&gt; -type d -empty -prune -exec rm -rf {} ;
-```
+- Replay the most recent one (excluding dry-runs)
+- Validate the latest Scatter copy operation
+
+(both replay and validate need a confirmation before proceeding)
+
+### Other features
+
+- The Scatter and Gather screens are now completely separate, which means you can switch freely among them, without any 
+side effects.
+- A select/deselect all checkbox was added for the TO column in the Scatter screen.
+- The default rsync flags are now fixed, you can only add flags.
+
+### Improvements / Bug fixes
+
+- Fix leaving empty folders behind (Gather operation)
+- Fix display of disk location per selection (Gather screen)
+- Fix calculation of space bar
+- Improve throttling of transfer progress updates
+- Avoid running stop script if not present
+- Fix enabling/disabling buttons based on selections
+- Refactor code to better represent the app&#39;s concepts (plan, operation, commands, etc.)
+- The size of the bundle was reduced by approximately 70%
 </CHANGES>
 
 <!--
@@ -60,7 +82,7 @@ Prepare for installation.
 <FILE Run="/bin/bash">
 <INLINE>
 # Let's stop the unbalance process, if it's running
-/usr/local/emhttp/plugins/&name;/scripts/stop
+[ -f "/usr/local/emhttp/plugins/&name;/scripts/stop" ] && /usr/local/emhttp/plugins/&name;/scripts/stop
 
 # Remove emhttp files so we can re-install.
 rm -rf /usr/local/emhttp/plugins/&name;/* 2>/dev/null
