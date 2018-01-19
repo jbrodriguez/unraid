@@ -3,24 +3,33 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "2.6.1">
+<!ENTITY version     "v2018.01.19">
+<!ENTITY appver      "2.7.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
-<!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "73b336efabaf81f957099b48bef92b48">
+<!ENTITY bundle      "&name;-&appver;.tgz">
+<!ENTITY md5         "4bcc146f637ec4ed0f44487fce836ac9">
 ]>
 
 <PLUGIN  name="&name;"
          author="&author;"
          version="&version;"
+         appver="&appver;"
          launch="&launch;"
          pluginURL="&pluginURL;"
 >
 
 <CHANGES>
-2017-11-08 - 2.6.1
+2018-01-19 - 2.7.0
 
-- Fix plugin invocation (default to false, pass the flag for true)
+This release adds support for the sleep feature in the ControlR app.
+It also adds ipmi-sensors support.
+
+Additional changes:
+- Fix plugin install script (remove extraneous message on server boot)
+- Adjust ssl handling for 6.4.0 stable unRAID release
+- Use date based version
+- Other bug fixes and performance improvements
 </CHANGES>
 
 <!--
@@ -31,7 +40,7 @@ ControlR is a companion plugin for the ControlR app.
 Get the ControlR bundle.
 -->
 <FILE Name="/boot/config/plugins/&name;/&bundle;">
-<URL>"https://github.com/jbrodriguez/controlr/releases/download/&version;/&bundle;"</URL>
+<URL>"https://github.com/jbrodriguez/controlr/releases/download/&appver;/&bundle;"</URL>
 <MD5>&md5;</MD5>
 </FILE>
 
@@ -54,14 +63,11 @@ Prepare for installation.
 <INLINE>
 running=$(pidof controlr | wc -w)
 
-# Let's stop the controlr process, if it's running
-/usr/local/emhttp/plugins/&name;/scripts/stop
-
 # Remove emhttp files so we can re-install.
 rm -rf /usr/local/emhttp/plugins/&name;/* 2>/dev/null
 
 # Remove old 'bundle' files.
-rm -f $(ls /boot/config/plugins/&name;/&name;*.tgz 2>/dev/null | grep -v '&version;')
+rm -f $(ls /boot/config/plugins/&name;/&name;*.tgz 2>/dev/null | grep -v '&appver;')
 
 # Install the 'bundle'.
 tar -xf /boot/config/plugins/&name;/&bundle; -C /usr/local/emhttp/plugins
