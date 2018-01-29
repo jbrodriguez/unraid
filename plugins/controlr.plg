@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2018.01.26">
-<!ENTITY appver      "2.7.3">
+<!ENTITY version     "v2018.01.29">
+<!ENTITY appver      "2.7.4">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "fd5708978755e1fbdc38fc2b31ff3de5">
+<!ENTITY md5         "e6828b1f4c9b4eb5cc09b7101e2f47c7">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,10 +20,9 @@
 >
 
 <CHANGES>
-2018-01-26 - 2.7.3
+2018-01-29 - 2.7.4
 
-- Quote ipmi-sensor params
-- Use main ssl config file
+- Add debug logging
 </CHANGES>
 
 <!--
