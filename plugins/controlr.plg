@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2018.01.30">
-<!ENTITY appver      "2.7.6">
+<!ENTITY version     "v2018.01.30a">
+<!ENTITY appver      "2.7.7">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "87747b940f5f5388edb397fe960134c9">
+<!ENTITY md5         "30507d392104d7b45b14046d63119fcd">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,9 +20,9 @@
 >
 
 <CHANGES>
-2018-01-30 - 2.7.6
+2018-01-30 - 2.7.7
 
-- Enable ipmi data sampling
+- Remove ipmi sampling
 </CHANGES>
 
 <!--
