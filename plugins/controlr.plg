@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2018.02.02">
-<!ENTITY appver      "2.8.0">
+<!ENTITY version     "v2018.02.16a">
+<!ENTITY appver      "2.9.1">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "d3c769c7f507c282fa634149ce819f57">
+<!ENTITY md5         "ae6e6fbf0754ca32763c3563e658a1e5">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,12 +20,14 @@
 >
 
 <CHANGES>
-2018-02-02 - 2.8.0
+2018-02-16 - 2.9.1
 
-This release brings the correct implementation of ipmi handling as well as
-some minor issues with apc.
+This release implements a rewrite of the permissions webUI (new framework),
+although visually it remains mostly the same.
 
-Thanks to all the unRAID users that made it possible !
+Other changes:
+- Fix issue with checking permissions in UI
+- Fix ipmi sensor detection
 </CHANGES>
 
 <!--
