@@ -3,24 +3,40 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "4.0.2">
+<!ENTITY version     "v2018.02.27">
+<!ENTITY appver      "5.0.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
-<!ENTITY bundle      "&name;-&version;.tgz">
-<!ENTITY md5         "32803202ba63a609ef5125c0f4759b9f">
+<!ENTITY bundle      "&name;-&appver;.tgz">
+<!ENTITY md5         "c1a76c2a6fe5f0399949bb4cd01613f8">
 ]>
 
 <PLUGIN  name="&name;"
          author="&author;"
          version="&version;"
+         appver="&appver;"
          launch="&launch;"
          pluginURL="&pluginURL;"
 >
 
 <CHANGES>
-2018-01-12 - 4.0.2
+2018-02-27 - 5.0.0
 
-- Revert date base plugin version
+This release improves rsync execution handling.
+
+Any rsync command that generates a code 23 error will be flagged and the source files/folders it refers to, will not be deleted.
+
+Use the History page and the log file (/boot/logs/unbalance.log), to check which commands had issues and act accordingly.
+
+Once the issue is solved, you can remove the source files/folders, using the &#39;rmsrc&#39; button in the History page.
+
+Also, although the rsync default flags are the same (-avPRX), you can now remove the &#39;X&#39; flag, if you want.
+
+Additional changes:
+- Implement /proc based rsync monitoring
+- Enable https support
+- Fix floating footer issue
+- Use date-based version
 </CHANGES>
 
 <!--
@@ -31,7 +47,7 @@ The plugin frees up space from a disk array in unRAID systems.
 Get the unBALANCE bundle.
 -->
 <FILE Name="/boot/config/plugins/&name;/&bundle;">
-<URL>"https://github.com/jbrodriguez/unbalance/releases/download/&version;/&bundle;"</URL>
+<URL>"https://github.com/jbrodriguez/unbalance/releases/download/&appver;/&bundle;"</URL>
 <MD5>&md5;</MD5>
 </FILE>
 
@@ -51,14 +67,21 @@ Prepare for installation.
 -->
 <FILE Run="/bin/bash">
 <INLINE>
+running=$(pidof controlr | wc -w)
+
 # Remove emhttp files so we can re-install.
 rm -rf /usr/local/emhttp/plugins/&name;/* 2>/dev/null
 
 # Remove old 'bundle' files.
-rm -f $(ls /boot/config/plugins/&name;/&name;*.tgz 2>/dev/null | grep -v '&version;')
+rm -f $(ls /boot/config/plugins/&name;/&name;*.tgz 2>/dev/null | grep -v '&appver;')
 
 # Install the 'bundle'.
 tar -xf /boot/config/plugins/&name;/&bundle; -C /usr/local/emhttp/plugins
+
+# start the plugin if it was running previously
+if [ $running -eq 1 ]; then
+	/usr/local/emhttp/plugins/&name;/scripts/start
+fi
 
 echo ""
 echo "-----------------------------------------------------------"
@@ -100,6 +123,19 @@ CFGFILE=/boot/config/plugins/unbalance/unbalance.cfg
 [ ! `cat "$CFGFILE" | grep ^PORT` ] && echo "PORT=\"6237\"" >> "$CFGFILE"
 [ ! `cat "$CFGFILE" | grep RUNAS` ] && echo "RUNAS=\"nobody\"" >> "$CFGFILE"
 rm /tmp/unbalance-chkconf
+]]>
+</INLINE>
+</FILE>
+
+<FILE Name="/tmp/unbalance-chkconf2" Run="/bin/bash">
+<INLINE>
+<![CDATA[
+#!/bin/sh
+# This should run for v5.0.x only
+# If unbalance.conf is present, reset the rsyncArgs flag to the new default
+CONF=/boot/config/plugins/unbalance/unbalance.conf
+[ -f "$CONF" ] && sed -i 's/rsyncArgs.*/rsyncArgs=-X/' "$CONF"
+rm /tmp/unbalance-chkconf2
 ]]>
 </INLINE>
 </FILE>
