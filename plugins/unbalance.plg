@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2018.05.12">
-<!ENTITY appver      "5.2.0">
+<!ENTITY version     "v2018.06.05">
+<!ENTITY appver      "5.2.1">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "201416c86a76364ba40ba7576cfde5c2">
+<!ENTITY md5         "f103b7ad47883a5eba9d1588b749f32c">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,12 +20,10 @@
 >
 
 <CHANGES>
-2018-05-12 - 5.2.0
+2018-06-05 - 5.2.1
 
-This release allows the user to customize the UI&#39;s refresh rate, when transferring data.
-
-Also:
-- Fix ssl cert detection
+- Fix calculation of space in the planning stage
+- Fix wrong command icon in history screen
 </CHANGES>
 
 <!--
