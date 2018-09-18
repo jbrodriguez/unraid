@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2018.06.05">
-<!ENTITY appver      "5.2.1">
+<!ENTITY version     "v2018.09.18a">
+<!ENTITY appver      "5.4.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "f103b7ad47883a5eba9d1588b749f32c">
+<!ENTITY md5         "8e22ccb573435dba4230bb62dc72680e">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,10 +20,12 @@
 >
 
 <CHANGES>
-2018-06-05 - 5.2.1
+2018-09-18 - 5.4.0
 
-- Fix calculation of space in the planning stage
-- Fix wrong command icon in history screen
+- Improve handling of protocol (http/https) based on Unraid&#39;s SSL settings
+- Change unraid logo
+- Round seconds to prevent display issues in History screen
+- Fix CI issues
 </CHANGES>
 
 <!--
