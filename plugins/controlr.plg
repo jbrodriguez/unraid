@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2018.10.03">
-<!ENTITY appver      "2.14.0">
+<!ENTITY version     "v2019.02.08">
+<!ENTITY appver      "2.15.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "b6b881f7d6b32cb37887767be123f268">
+<!ENTITY md5         "3568731699884221e0b7e5da66c6d86b">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,14 +20,9 @@
 >
 
 <CHANGES>
-2018-10-03 - 2.13.0
+2019-02-08 - 2.15.0
 
-This release always starts the api endpoint on https.
-
-Other changes:
-- Remove  from stack trace
-- Go lint (revive)
-- Fix Go lint errors
+- Add support for 6.7.x
 </CHANGES>
 
 <!--
