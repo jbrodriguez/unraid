@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2019.02.08">
-<!ENTITY appver      "2.15.0">
+<!ENTITY version     "v2019.03.28">
+<!ENTITY appver      "2.16.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "3568731699884221e0b7e5da66c6d86b">
+<!ENTITY md5         "0ae3ce0aa0dc1824cf7855ebc863fd1b">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,9 +20,14 @@
 >
 
 <CHANGES>
-2019-02-08 - 2.15.0
+2019-03-28 - 2.16.0
 
-- Add support for 6.7.x
+Some improvements / bug fixes:
+
+- Improved user experience (no more `mini game` 😁)
+- UI improvements
+- Log certificate detection
+- Fix protocol handling
 </CHANGES>
 
 <!--
