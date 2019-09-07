@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2019.02.12b">
-<!ENTITY appver      "5.5.0">
+<!ENTITY version     "v2019.09.07">
+<!ENTITY appver      "5.6.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "2034f2926b87f2de283eb90eb6f38aef">
+<!ENTITY md5         "a99fd6b8099f1f8d4127936b9541462a">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,21 +20,19 @@
 >
 
 <CHANGES>
-2019-02-12 - 5.5.0
+2019-09-07 - 5.6.0
 
-This is overall a very small release.
-
-There was a bug that prevented Reserved Space to be saved.
-
-Also, rsync error 13 (Errors with program diagnostics) is now also 
-flagged so it won&#39;t stop the whole operation, you will still need 
-to check the logs as for the reasons of the error.
+This is a minor release with some new features and some optimizations.
 
 Changes:
 
-- Allow ReservedAmount/ReservedUnit to be saved to disk
-- Add error 13 as flagged command
-- Core libraries updated
+- Add elapsed time to transfer screen
+- Fix unbalance logo container background color
+- Add contrast to drop down in history screen
+- Decrease binary size
+- Compress server output
+- Modify UI version format
+- Add notice about exclusive access in the UI
 </CHANGES>
 
 <!--
