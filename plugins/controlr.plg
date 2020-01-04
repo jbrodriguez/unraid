@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2019.03.28">
-<!ENTITY appver      "2.16.0">
+<!ENTITY version     "v2020.01.04">
+<!ENTITY appver      "2.17.1">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "0ae3ce0aa0dc1824cf7855ebc863fd1b">
+<!ENTITY md5         "dfbde94932a01eb6e7192912e253efd6">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,14 +20,9 @@
 >
 
 <CHANGES>
-2019-03-28 - 2.16.0
+2020-01-04 - 2.17.1
 
-Some improvements / bug fixes:
-
-- Improved user experience (no more `mini game` 😁)
-- UI improvements
-- Log certificate detection
-- Fix protocol handling
+Small changes to system sensor data parsing.
 </CHANGES>
 
 <!--
