@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2020.01.04">
-<!ENTITY appver      "2.17.1">
+<!ENTITY version     "v2020.01.11">
+<!ENTITY appver      "2.17.2">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "dfbde94932a01eb6e7192912e253efd6">
+<!ENTITY md5         "8bf0a5fb4ec0d534273819cff44ac871">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,9 +20,10 @@
 >
 
 <CHANGES>
-2020-01-04 - 2.17.1
-
-Small changes to system sensor data parsing.
+2020-01-11 - 2.17.2
+- Ignore additional folder
+- Add workspace
+- Debugging
 </CHANGES>
 
 <!--
