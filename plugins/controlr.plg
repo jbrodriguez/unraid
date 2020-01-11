@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2020.01.11">
-<!ENTITY appver      "2.17.2">
+<!ENTITY version     "v2020.01.11a">
+<!ENTITY appver      "2.18.0">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "8bf0a5fb4ec0d534273819cff44ac871">
+<!ENTITY md5         "17f15ba01e92a4c92f57b109d4521020">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,10 +20,9 @@
 >
 
 <CHANGES>
-2020-01-11 - 2.17.2
-- Ignore additional folder
-- Add workspace
-- Debugging
+2020-01-11 - 2.18.0
+
+- Fix Celsius to Fahrenheit conversion
 </CHANGES>
 
 <!--
