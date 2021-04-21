@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "unbalance">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2019.10.26">
-<!ENTITY appver      "5.6.3">
+<!ENTITY version     "v2021.04.21">
+<!ENTITY appver      "5.6.4">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "1e57e2c5d951ce9ba171860c82f410cb">
+<!ENTITY md5         "c87c4dfecad21f2e6100a4fe541b5c7b">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,12 +20,10 @@
 >
 
 <CHANGES>
-2019-10-26 - 5.6.3
-
-- Support 6.8.x
-- Add missing isNumber function
-- Upgrade some libraries
-- Switch to yarn
+2021-04-21 - 5.6.4
+- Implement go linting (golangci)
+- Fix port issue
+- Fix ownership, permissions and paths (Unraid compliance)
 </CHANGES>
 
 <!--
@@ -65,7 +63,7 @@ rm -rf /usr/local/emhttp/plugins/&name;/* 2>/dev/null
 rm -f $(ls /boot/config/plugins/&name;/&name;*.tgz 2>/dev/null | grep -v '&appver;')
 
 # Install the 'bundle'.
-tar -xf /boot/config/plugins/&name;/&bundle; -C /usr/local/emhttp/plugins
+tar -xf /boot/config/plugins/&name;/&bundle; -C /
 
 # start the plugin if it was running previously
 if [ $running -eq 1 ]; then
