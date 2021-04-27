@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2020.05.09">
-<!ENTITY appver      "2.19.0">
+<!ENTITY version     "v2021.04.27">
+<!ENTITY appver      "2.19.1">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "92783fa331a40b4a2b497b5fc09be051">
+<!ENTITY md5         "fbb70e352c9c3037c017f8dd5627db66">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,9 +20,8 @@
 >
 
 <CHANGES>
-2020-05-09 - 2.19.0
-- Improvements to port and ip address detection
-- Other bug fixes and improvements
+2021-04-27 - 2.19.1
+- Fix ownership, permissions and paths (Unraid compliance)
 </CHANGES>
 
 <!--
@@ -63,7 +62,7 @@ rm -rf /usr/local/emhttp/plugins/&name;/* 2>/dev/null
 rm -f $(ls /boot/config/plugins/&name;/&name;*.tgz 2>/dev/null | grep -v '&appver;')
 
 # Install the 'bundle'.
-tar -xf /boot/config/plugins/&name;/&bundle; -C /usr/local/emhttp/plugins
+tar -xf /boot/config/plugins/&name;/&bundle; -C /
 
 # start the plugin if it was running previously
 if [ $running -eq 1 ]; then
