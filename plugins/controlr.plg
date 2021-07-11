@@ -3,12 +3,12 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "controlr">
 <!ENTITY author      "Juan B. Rodriguez">
-<!ENTITY version     "v2021.07.04">
-<!ENTITY appver      "2.23.0">
+<!ENTITY version     "v2021.07.11">
+<!ENTITY appver      "2.23.1">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY pluginURL   "https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/&name;.plg">
 <!ENTITY bundle      "&name;-&appver;.tgz">
-<!ENTITY md5         "f38b8a423e89a16ed9bb6d634c42a71e">
+<!ENTITY md5         "b712b37b32dd04aae34809c3fc9a7071">
 ]>
 
 <PLUGIN  name="&name;"
@@ -20,12 +20,8 @@
 >
 
 <CHANGES>
-2021-07-04 - 2.23.0
-- Implement origin endpoint
-- Run npm audit fix
-- Fix build
-- Switch to yarn
-- Add github token
+2021-07-11 - 2.23.1
+- Implement onDemand origin extraction
 </CHANGES>
 
 <!--
