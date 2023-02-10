@@ -9,6 +9,6 @@
 <Description>
 This plugin frees up space space from one of the disks in the array, by moving folders and files to other disks.
 </Description>
-<Support>https://forums.lime-technology.com/topic/43651-plug-in-unbalance/</Support>
+<Support>https://forums.unraid.net/topic/43651-plug-in-unbalance/</Support>
 <Icon>https://i.imgur.com/Lj5l0ni.png</Icon>
 </Containers>
