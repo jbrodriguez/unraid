@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/jbrodriguez/unraid/main/jb.png</Icon>
+  <Profile>
+    Creator and maintainer of unbalanced and ControlR, specifically developed for Unraid.
+  </Profile>
+  <DonateLink>https://jbrio.net/unbalanced</DonateLink>
+  <DonateText>If you like my work please consider sponsoring.</DonateText>
+</Maintainer>
