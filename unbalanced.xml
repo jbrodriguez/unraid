@@ -5,9 +5,9 @@
 <PluginAuthor>Juan B. Rodriguez</PluginAuthor>
 <Beta>False</Beta>
 <Category>Tools:</Category>
-<Name>unBALANCE</Name>
+<Name>unbalanced</Name>
 <Description>
-This plugin frees up space space from one of the disks in the array, by moving folders and files to other disks.
+unbalanced transfers files/folders between disks in your array.
 </Description>
 <Support>https://forums.unraid.net/topic/43651-plug-in-unbalance/</Support>
 <DonateText>i'm out of cookies</DonateText>
