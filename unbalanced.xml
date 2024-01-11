@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Plugin>True</Plugin>
+<PluginURL>https://github.com/jbrodriguez/unbalance/releases/latest/download/unbalanced.plg</PluginURL>
+<PluginAuthor>Juan B. Rodriguez</PluginAuthor>
+<Beta>False</Beta>
+<Category>Tools:</Category>
+<Name>unbalanced</Name>
+<Description>
+unbalanced transfers files/folders between disks in your array.
+</Description>
+<Support>https://forums.unraid.net/topic/43651-plug-in-unbalance/</Support>
+<DonateURL>https://jbrio.net/unbalanced</DonateURL>
+<DonateText>If you like my work please consider sponsoring.</DonateText>
+<Icon>https://i.imgur.com/Lj5l0ni.png</Icon>
+</Containers>
