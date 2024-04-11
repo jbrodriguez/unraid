@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
 <Plugin>True</Plugin>
-<PluginURL>https://raw.githubusercontent.com/jbrodriguez/unraid/master/plugins/controlr.plg</PluginURL>
+<PluginURL>https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg</PluginURL>
 <PluginAuthor>Juan B. Rodriguez</PluginAuthor>
 <Beta>False</Beta>
 <Category>Tools:</Category>
