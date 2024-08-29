@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Plugin>True</Plugin>
+<PluginURL>https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg</PluginURL>
+<PluginAuthor>Juan B. Rodriguez</PluginAuthor>
+<Beta>False</Beta>
+<Category>Tools:</Category>
+<Name>controlrd</Name>
+<Description>
+controlrd is a companion plugin for the ControlR app.
+</Description>
+<Support>https://forums.unraid.net/topic/51332-plugin-controlr/</Support>
+<Icon>https://i.imgur.com/kP4Ibku.png</Icon>
+</Containers>
